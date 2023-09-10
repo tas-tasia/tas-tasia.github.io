@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+  <script src="https://kit.fontawesome.com/4a225315bb.js" crossorigin="anonymous"></script>
+
+  
+  <title> Planet Facts</title>
+</head>
+<body>
+    <div class="scrolling-image"></div>
+  <header id="header"><p>THE PLANETS</p>
+    <nav>
+      <ul class="menu">
+        <li class="menuItem" id="mercury">
+          <span class="menuPlanetIcon" id="mercuryIcon"></span> MERCURY <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="venus">
+          <span class="menuPlanetIcon" id="venusIcon"></span>VENUS <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="earth">
+          <span class="menuPlanetIcon" id="earthIcon"></span>EARTH <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="mars">
+          <span class="menuPlanetIcon" id="marsIcon"></span>MARS <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="jupiter">
+          <span class="menuPlanetIcon" id="jupiterIcon"></span>JUPITER <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="saturn">
+          <span class="menuPlanetIcon" id="saturnIcon"></span>SATURN <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="uranus">
+          <span class="menuPlanetIcon" id="uranusIcon"></span>URANUS <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+        <li class="menuItem" id="neptune">
+          <span class="menuPlanetIcon" id="neptuneIcon"></span>NEPTUNE <span class="chevron"><img src="assets/icon-chevron.svg" alt=""></span></li>
+      </ul>
+      <button class="hamburger">
+        <div><i class=" menuIcon fa-solid fa-bars fa-2xl"></i></div>
+        <i class="closeIcon fa-solid fa-bars fa-2xl" style="display: none;"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="info-topic-wrapper-mobile">
+      <p class="info-topic-mobile" id="overviewButtonMobile">Overview</p>
+      <p class="info-topic-mobile" id="internalButtonMobile">Structure</p>
+      <p class="info-topic-mobile" id="surfaceButtonMobile">Surface</p>
+      <!-- ^^^ change id to '-mobile' then create js variables for them and fix window.onload function  -->
+    </div>
+    <section class="info-wrapper">
+      <div class="img-wrapper">
+        <img src="assets/planet-mercury.svg" alt="Illustrated picture of the planet Mercury" id="planetImg">
+        <img id="planetGeologyImg" class="hide" src="assets/geology-mercury.png" alt="">
+      </div>
+      
+      <div class="text-section">
+        <div class="text-wrapper">
+          <h1 id="planetName">Mercury</h1>
+          <p id="planetText">
+            Mercury is the smallest planet in the Solar System and the closest 
+            to the Sun. Its orbit around the Sun takes 87.97 Earth days, the 
+            shortest of all the Sun's planets. Mercury is one of four terrestrial 
+            planets in the Solar System, and is a rocky body like Earth.
+          </p>
+          
+          <div class="source-wrapper">
+            <p class="source">Source : 
+              <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" id="sourceLink" aria-label="Read more about the planet">Wikipedia</a>
+            </p>
+            <a href="https://en.wikipedia.org/wiki/Mercury_(planet)" aria-label="Read more about the planet"><img src="assets/icon-source.svg" alt="" class="source-icon" id="sourceLinkIcon"></a>
+          </div>
+        </div>
+
+        <div class="info-topic-wrapper">
+          <p class="info-topic" id="overviewButton"><span class="num">01</span> Overview</p>
+          <p class="info-topic" id="internalButton"><span class="num">02</span> Internal Structure</p>
+          <p class="info-topic" id="surfaceButton"><span class="num">03</span> Surface Geology</p>
+        </div>
+      </div>
+    </section>
+    <footer class="stats-wrapper">
+      <div class="stats-box">
+        <h2 class="stat-title">Rotation Time</h2>
+        <p class="stat-text" id="rotationText">58.6 Days</p> 
+      </div>
+      <div class="stats-box">
+        <h2 class="stat-title">Revolution Time</h2>
+        <p class="stat-text" id="revolutionText">87.97 Days</p>
+      </div>
+      <div class="stats-box">
+        <h2 class="stat-title">Radius</h2>
+        <p class="stat-text" id="radiusText">2,439.7 KM</p>
+      </div>
+      <div class="stats-box">
+        <h2 class="stat-title">Average Temp.</h2>
+        <p class="stat-text" id="tempText">430°c</p>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>

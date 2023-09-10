@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --mercury-color: #419EBB;
+  --venus-color: #EDA249;
+  --earth-color: #6D2ED5;
+  --mars-color: #D14C32;
+  --jupiter-color: #D83A34;
+  --saturn-color: #CD5120;
+  --uranus-color: #1EC1A2;
+  --neptune-color: #2D68F0;
+  --white: #FFFFFF;
+  --white-text: #FFFFFFCC;
+  --space: #070724;
+  --dark-grey: #38384F;
+  --light-grey: #838391;
+}
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--space);
+  position: relative;
+  overflow-x: hidden;
+}
+main {
+  max-width: 1640px;
+  /* height: 100vh; */
+  margin: 0 auto;
+}
+@keyframes slide {
+  0%{
+    transform: translate3d(-550px, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1692px, 0, 0);
+  }
+}
+.scrolling-image {
+  background-image: url(assets/background-stars.svg);
+  background-repeat: repeat-x;
+  width: 5000px;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  
+  animation: slide 60s linear infinite;
+}
+
+
+/* ---------------------- */
+/* HEADER AND NAV SECTION */
+/* ---------------------- */
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.75rem;
+  color: var(--white);
+  font-family: Antonio;
+  border-width: 100vw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header p {
+  padding-top: 1.375rem;
+  padding-bottom: 1.563rem;
+  padding-left: 2rem;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2.063rem;
+  font-size: 0.75rem;
+  font-family: League Spartan;
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0.75;
+  color: var(--white);
+  padding-right: 2.5rem;
+}
+.hamburger {
+  display: none;
+}
+.chevron {
+  display: none;
+}
+li {
+  display: flex;
+  padding-top: 2.063rem;
+  border-top: 3px solid #ffffff00;
+  cursor: pointer;
+}
+
+#mercury:hover {
+  border-top: 3px solid var(--mercury-color);
+}
+#venus:hover {
+  border-top: 3px solid var(--venus-color);
+}
+#earth:hover {
+  border-top: 3px solid var(--earth-color);
+}
+#mars:hover {
+  border-top: 3px solid var(--mars-color);
+}
+#jupiter:hover {
+  border-top: 3px solid var(--jupiter-color);
+}
+#saturn:hover {
+  border-top: 3px solid var(--saturn-color);
+}
+#uranus:hover {
+  border-top: 3px solid var(--uranus-color);
+}
+#neptune:hover {
+  border-top: 3px solid var(--neptune-color);
+}
+
+
+/* ------------ */
+/* INFO SECTION */
+/* ------------ */
+.info-topic-wrapper-mobile {
+  display: none;
+}
+.info-wrapper {
+  color: var(--white);
+  margin-bottom: 5.5rem;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  grid-template-rows: 1fr;
+  grid-column-gap: 1px;
+  grid-row-gap: 0px;
+  place-items: center;
+  padding-right: 165px;
+  position: relative;
+}
+.img-wrapper {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / 2 / 2;
+}
+#planetImg {
+  max-width: 582px;
+  margin: 0 auto;
+  margin-top: 3rem;
+  transition: 0.5s;
+}
+#planetGeologyImg {
+  width: 10.188rem;
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  transition: 0.5s;
+}
+.text-section {
+  max-width: 21.875rem;
+  font-family: League Spartan; 
+  margin-top: 7.25rem;
+  grid-area: 1 / 2 / 2 / 3;
+}
+#planetName {
+  font-family: Antonio;
+  color: var(--white);
+  font-size: clamp(2.5rem, 1.6197rem + 3.7559vw, 5rem);
+  line-height: 1.04;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+#planetText {
+  margin-top: 1.438rem;
+  font-family: League Spartan;
+  font-size: clamp(0.988rem, 0.6605rem + 0.5439vw, 1.15rem);
+  line-height: 1.5;
+  font-weight: 300;
+  color: var(--white-text);
+  transition: 0.5s;
+}
+.source-wrapper {
+  display: flex;
+  margin-top: 1.5rem;
+  margin-bottom: 2.438rem;
+  justify-content: flex-start;
+}
+.source {
+  color: var(--light-grey);
+  font-weight: 200;
+  letter-spacing: .6px;
+}
+#sourceLink {
+  color: var(--light-grey);
+  font-weight: 400;
+  letter-spacing: .5px;
+}
+#sourceLink:hover {
+  color: rgba(255, 255, 255, 0.653);
+}
+.source-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin-left: 0.5rem;
+  margin-top: 3px;
+}
+.info-topic-wrapper {
+  max-width: 21.875rem;
+  min-width: 17.563rem;
+}
+.info-topic {
+  letter-spacing: 2.57143px;
+  text-transform: uppercase;
+  border: 1px solid var(--dark-grey);
+  padding: 0.75rem;
+  width: 100%;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: clamp(0.625rem, 0.4930rem + 0.5634vw, 1rem);
+}
+.num {
+  opacity: 0.5;
+}
+.info-topic:hover {
+  background-color: var(--dark-grey);
+}
+
+
+/* ------------- */
+/* STATS SECTION */
+/* ------------- */
+.stats-wrapper {
+  display: flex;
+  gap: 1.875rem;
+  justify-content: space-between;
+  padding-right: 165px;
+  padding-left: 165px;
+  margin-bottom: 1rem;
+}
+.stats-box {
+  width: 255px;
+  border: 1px solid var(--dark-grey);
+}
+.stat-title {
+  font-weight: 400;
+  font-size: clamp(0.7rem, 0.3768rem + 0.5258vw, 0.85rem);
+  font-family: League Spartan;
+  color: var(--white);
+  opacity: 0.5;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 2.27;
+  padding-left: 10%;
+  padding-top: 5%;
+}
+.stat-text {
+  font-family: Antonio;
+  font-size: clamp(1.45rem ,0.809rem + 1.877vw, 2.5rem);
+  color: var(--white);
+  padding-left: 10%;
+  padding-bottom: 10%;
+  transition: 0.5s;
+}
+#rotationText {
+  transition: 0.5s;
+}
+
+/* class created for fade-in effect */
+.hide {
+  opacity: 0;
+}
+
+/* Class to hide  and prevent scrolling */
+.prevent {
+  overflow: hidden;
+}
+
+/* ------ */
+/* TABLET */
+/* ------ */
+@media (max-width: 1018px) {
+  body {
+    padding: 2.5rem 0 2.5rem 0;
+  }
+  main {
+    max-width: 1017px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  header p {
+    padding: 0;
+  }
+  .menu {
+    margin-top: 1.25rem;
+    margin-bottom: 1.563rem;
+    padding: 0;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  li {
+    padding-top: .5rem;
+  }
+
+  .info-wrapper {
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    /* grid-template-rows: repeat(2, 460px); */
+    /* place-items: center; */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    /* height: 725px; */
+    margin: 0;
+  }
+  .img-wrapper {
+    /* grid-area: 1 / 1 / 2 / 3; */
+    height: clamp(19.625rem, 14.3031rem + 22.7063vw, 28.75rem);
+    width: 100%;
+    /* place-items: center; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  #planetImg {
+    -webkit-transform: scale(0.65); /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.65); /* FF3.5+ */
+    -ms-transform: scale(0.65); /* IE9 */
+    -o-transform: scale(0.65); /* Opera 10.5+ */
+    transform: scale(0.65);
+    margin-top: 0;
+    margin: '';
+    max-width: '';
+  }
+  #planetGeologyImg {
+    -webkit-transform: scale(.75); /* Saf3.1+, Chrome */
+    -moz-transform: scale(.75); /* FF3.5+ */
+    -ms-transform: scale(.75); /* IE9 */
+    -o-transform: scale(.75); /* Opera 10.5+ */
+    transform: scale(.75);
+  }
+  .text-section {
+    display: flex;
+    margin-top: 0;
+    min-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+  .text-wrapper {
+    min-width: clamp(10rem, -29.2644rem + 114.2239vw, 25.563rem);
+    max-width: clamp(10rem, -29.2644rem + 114.2239vw, 25.563rem);
+  }
+  #planetText {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .info-topic-wrapper {
+    max-width: clamp(10rem, -48.1860rem + 143.2271vw, 20.563rem);
+  }
+  .source-wrapper {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .stats-wrapper {
+    padding: 0;
+  }
+  .stats-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ------ */
+/* MOBILE */
+/* ------ */
+@media (max-width: 660px) {
+  body {
+    padding: 0;
+  }
+  main {
+    padding: 0;
+    z-index: 95;
+    opacity: 1;
+    transition: 0.5s;
+  }
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  header p {
+    /* padding: 1rem 1.5rem 1rem 1.5rem; */
+  }
+  .info-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .menu {
+    opacity: 0;
+    gap: 0;
+    height: 100vh;
+    margin: 0;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* HAMBURGER MENU */
+  .menuItem {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding-top: 1.25rem;
+    padding-bottom: 1.188rem;
+    border-bottom: 1px solid var(--dark-grey);
+  }
+  .chevron {
+    display: block;
+    margin-left: auto;
+  }
+  .menuItem:hover {
+    text-decoration: underline;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 1.555rem;
+    right: 1.5rem;
+    padding: 4px;
+    border: none;
+    background: var(--space);
+    color: var(--white);
+    cursor: pointer;
+  }
+  .closeIcon {
+    display: none;
+  }
+  .menu {
+    position: fixed;
+    transform: translateY(-120%);
+    transition: transform 0.5s ease-in-out;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--space);
+    color: white;
+    list-style: none;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    margin-top: 4.45rem;
+  }
+  #mercuryIcon {
+    background-color: #DEF4FC;
+  }
+  #venusIcon {
+    background-color: #F7CC7F;
+  }
+  #earthIcon {
+    background-color: #545BFE;
+  }
+  #marsIcon {
+    background-color: #FF6A45;
+  }
+  #jupiterIcon {
+    background-color: #ECAD7A;
+  }
+  #saturnIcon {
+    background-color: #FCCB6B;
+  }
+  #uranusIcon {
+    background-color: #65F0D5;
+  }
+  #neptuneIcon {
+    background-color: #497EFA;
+  }
+  .menuPlanetIcon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: pink;
+    margin-right: 1.563rem;
+  }
+  .showMenu {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  #mercury:hover, #venus:hover, #earth:hover, #mars:hover, #jupiter:hover, #saturn:hover, #uranus:hover, #neptune:hover {
+    border-top: 3px solid transparent;
+    text-decoration: none;
+  }
+ 
+
+  /* INFO TOPIC NAV */
+  .info-topic-wrapper {
+    display: none;
+  }
+  .info-topic-wrapper-mobile {
+    display: flex;
+    justify-content: space-between;
+    font-family: League Spartan;
+    letter-spacing: 1.92857px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 0.688rem;
+    border-bottom: 1px solid var(--dark-grey);
+  }
+  .info-topic-mobile {
+    color: white;
+    font-size: clamp(0.75rem, 0.4210rem + 1.4035vw, 1rem);
+    opacity: .5;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    padding-top: 1.25rem;
+    padding-bottom: 1.063rem;
+    border-bottom: 4px solid transparent;
+  }
+  .active {
+    border-bottom: 4px solid;
+    opacity: 1;
+  }
+  /* .info-wrapper {
+    height: auto;
+  } */
+  #planetImg {
+    transform: scale(.5);
+  }
+  #planetGeologyImg {
+    -webkit-transform: scale(.60); /* Saf3.1+, Chrome */
+    -moz-transform: scale(.60); /* FF3.5+ */
+    -ms-transform: scale(.60); /* IE9 */
+    -o-transform: scale(.60); /* Opera 10.5+ */
+    transform: scale(.60);
+  }
+  .text-section {
+    justify-content: center;
+    width: 100%;
+  }
+  .text-wrapper {
+    max-width: 30rem;
+    text-align: center;
+  }
+  .source-wrapper {
+    justify-content: center;
+  }
+
+  .stats-wrapper {
+    flex-direction: column;
+    gap: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    margin-bottom: 2.938rem;
+  }
+  .stats-box {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+  }
+  .stat-title {
+    padding: 0;
+  }
+  .stat-text {
+    padding: 0;
+  }
+}
